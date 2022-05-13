@@ -1,0 +1,232 @@
+.products-content {
+  .container {
+    display: flex;
+    color: $primary;
+    padding: 0 16px;
+    @include w-sm {
+      display: block;
+      padding: 0;
+    }
+  }
+}
+.products-categories {
+  width: 24%;
+  h3 {
+    font-size: $fz-m;
+    margin-bottom: 16px;
+  }
+  .fa-leaf {
+    margin-right: 16px;
+  }
+  li {
+    border-bottom: 1px solid $primary;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  a {
+    display: block;
+    padding: 8px;
+    color: $primary;
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+  @include w-md {
+    width: 36%;
+  }
+  @include w-sm {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+}
+.products-list {
+  width: 80%;
+  @include w-sm {
+    width: 100%;
+  }
+}
+.products-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+  margin-left: 20px;
+  @include w-sm {
+    flex-wrap: wrap;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+}
+.search {
+  display: flex;
+  align-items: center;
+  width: 68%;
+  input {
+    width: 88%;
+    height: 32px;
+    border: 1px solid $primary;
+  }
+  a {
+    display: block;
+    font-size: $fz-m;
+    padding: 2px 6px;
+    background: $primary;
+    color: #fff;
+  }
+  @include w-md {
+    width: 60%;
+  }
+  @include w-sm {
+    width: 100%;
+    margin-bottom: 16px;
+    input {
+      width: 100%;
+    }
+  }
+}
+.cart {
+  display: flex;
+  align-items: center;
+  a {
+    display: block;
+    padding: 0 12px;
+    color: $primary;
+    font-weight: bold;
+    position: relative;
+    &:first-child {
+      border-right: 1px solid $primary;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .fa-cart-shopping {
+    font-size: $fz-l;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: $warning;
+    border-radius: 50%;
+  }
+}
+.products-cards {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 30%;
+    margin: 0 0 30px 20px;
+    position: relative;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  }
+  .fa-heart {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color: #fff;
+    font-size: $fz-m;
+  }
+  @include w-md {
+    li {
+      width: 44%;
+    }
+  }
+  @include w-sm {
+    li {
+      width: 100%;
+      margin-left: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.card-body {
+  padding: 10px;
+  h4 {
+    font-size: $fz-m;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 92px;
+      height: 1px;
+      background: $primary;
+    }
+  }
+  span {
+    display: block;
+    font-size: 12px;
+  }
+  p {
+    font-size: $fz-m;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  button {
+    width: 100%;
+    color: $warning;
+    border: 1px solid $warning;
+    border-radius: 4px;
+    padding: 4px;
+    &:hover {
+      background: $warning;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+.ribbon-wrap {
+  overflow: hidden;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 6px solid #029e77;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    left: 12px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-left: 6px solid #029e77;
+    border-right: 6px solid transparent;
+    bottom: 18px;
+    right: -6px;
+  }
+  .ribbon {
+    position: absolute;
+    top: 16px;
+    right: -32px;
+    transform: rotate(45deg);
+    width: 120px;
+    height: 24px;
+    line-height: 24px;
+    background: #0c9;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+}
